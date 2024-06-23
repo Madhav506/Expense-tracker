@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './edit-expense.component.html',
-  styleUrl: './edit-expense.component.css'
+  styleUrl: './edit-expense.component.scss'
 })
 export class EditExpenseComponent {
 

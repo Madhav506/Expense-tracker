@@ -1,1 +1,30 @@
-<p>user-registration works!</p>
+<div class="container">
+  <h2>Expense Tracker Registration</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">First Name</label>
+      <input id="firstName" formControlName="firstName" type="text" />
+    </div>
+    <div>
+      <label for="lastName">Last Name</label>
+      <input id="lastName" formControlName="lastName" type="text" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" formControlName="password" type="password" />
+    </div>
+    <div>
+      <label for="budgetLimit">Budget Limit</label>
+      <input id="budgetLimit" formControlName="budgetLimit" type="number" />
+    </div>
+    <div>
+      <label for="balance">Balance</label>
+      <input id="balance" formControlName="balance" type="number" />
+    </div>
+    <button type="submit" [disabled]="!userForm.valid">Register</button>
+  </form>
+</div>
