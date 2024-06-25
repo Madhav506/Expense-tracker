@@ -1,0 +1,64 @@
+@import "../../../assets/global_styles/mixins";
+@import "../../../assets/global_styles/variables";
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+      display: flex;
+      flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+
+    .error-message {
+      color: $btn-error-msg;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: $primary-btn-bg-color;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: $hover-btn-bg-color;
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
